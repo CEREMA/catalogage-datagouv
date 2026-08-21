@@ -1,0 +1,194 @@
+- slug: stationnement
+  label: Stationnement
+  description: stationnement, parking, parc de stationnement, place de stationnement, stationnement en voirie, aire de stationnement, parc relais, P+R, zone de stationnement payant, ZPS
+  subcategories:
+  - slug: stationnement_voirie
+    label: Stationnement en voirie
+    description: places de stationnement en voirie, linéaire de stationnement, stationnement toléré ou réglementé, places PMR, places autopartage, places 2 roues, curb management, CDS
+  - slug: aires_stationnement
+    label: Aires de stationnement
+    description: aires de stationnement, aires de stationnement poids lourds sur autoroutes, aires de covoiturage
+  - slug: parcs_enclos_ouvrage
+    label: Parcs en enclos et en ouvrage
+    description: parc en enclos, parc en ouvrage, parking couvert, base nationale des lieux de stationnement, profil Netex parking
+  - slug: stationnement_residentiel
+    label: Stationnement résidentiel
+    description: stationnement résidentiel, stationnement privé, données foncières de stationnement
+  - slug: stationnement_velo
+    label: Stationnement vélo
+    description: stationnement cyclable, arceaux vélo, consigne vélo, stationnement sécurisé en gare, base nationale du stationnement cyclable, BNSC
+  - slug: recharge_electrique_stationnement
+    label: Recharge électrique
+    description: bornes de recharge électrique, points de charge, IRVE, véhicules électriques en stationnement
+  - slug: tarification_stationnement
+    label: Tarification du stationnement
+    description: tarifs de stationnement, redevance, forfait post-stationnement, FPS, zones tarifaires
+  - slug: usage_stationnement
+    label: Usage du stationnement
+    description: occupation, disponibilité en temps réel, taux de rotation, durée de stationnement, transactions, abonnements, respect du stationnement
+  - slug: donnees_socioeco_stationnement
+    label: Données socio-économiques du stationnement
+    description: coûts et recettes du stationnement, enquêtes de comportement, temps de recherche de place
+- slug: transport_public
+  label: Transport public
+  description: transport public, transport en commun, transport collectif, bus, car, autocar, tramway, métro, train, TER, RER, gare, réseau de transport, AOM, autorité organisatrice de la mobilité
+  subcategories:
+  - slug: offre_theorique_tc
+    label: Offre de transport théorique
+    description: lignes, arrêts, horaires, circuits planifiés, GTFS, NeTEx, Transmodel, fiches horaires
+  - slug: info_temps_reel_tc
+    label: Information voyageurs en temps réel
+    description: GTFS-RT, SIRI, perturbations, position des véhicules, prochains passages, alertes de service
+  - slug: tarification_billettique_tc
+    label: Tarification et billettique
+    description: tarifs, zones tarifaires, titres de transport, billettique, profil NeTEx tarif, fares
+  - slug: accessibilite_tc
+    label: Accessibilité des transports publics
+    description: accessibilité PMR des arrêts, véhicules et services, wheelchair_accessible, accès libre mobilité
+  - slug: qualite_service_tc
+    label: Qualité de service et performance
+    description: ponctualité, régularité, fiabilité, indicateurs contractuels d'exploitation, enquêtes de satisfaction
+  - slug: usage_frequentation_tc
+    label: Usage et fréquentation
+    description: montées et descentes, validations, matrices origine-destination, taux de remplissage, fréquentation par ligne ou arrêt
+  - slug: infrastructure_materiel_tc
+    label: Infrastructure et matériel roulant
+    description: arrêts, pôles d'échanges, dépôts, gares, équipements (abris, bancs, affichage dynamique), parc de véhicules, état du patrimoine
+  - slug: transport_scolaire
+    label: Transport scolaire
+    description: transport scolaire, circuits scolaires, écomobilité scolaire
+  - slug: donnees_financieres_tc
+    label: Données financières et dépenses publiques
+    description: dépenses publiques de transport, comptes administratifs, coûts d'exploitation, financement des AOM
+- slug: voirie
+  label: Voirie
+  description: voirie, réseau routier, rue, route, chaussée, trottoir, aménagement de voirie, gestion de voirie
+  subcategories:
+  - slug: lineaire_voirie
+    label: Linéaire de voirie
+    description: tracé des routes, autoroutes, rues, chemins, BD TOPO, Route 500
+  - slug: description_surfacique_voirie
+    label: Description surfacique de la voirie urbaine
+    description: emprise de voirie, PCRS, plan corps de rue simplifié
+  - slug: etat_chaussee
+    label: État de la chaussée
+    description: rugosité, fissures, déformations, auscultation de chaussée, état de surface
+  - slug: signalisation
+    label: Signalisation
+    description: panneaux de signalisation, signalisation directionnelle, de danger, d'indication, feux tricolores
+  - slug: equipements_voirie
+    label: Équipements publics de voirie
+    description: éclairage public, mobilier urbain, bornes de recharge, arrêts de bus, équipements de voirie
+- slug: velo
+  label: Vélo
+  description: vélo, cyclable, cycliste, vélos, bicyclette, deux roues, modes actifs
+  subcategories:
+  - slug: amenagements_cyclables
+    label: Aménagements cyclables
+    description: pistes cyclables, bandes cyclables, base nationale des aménagements cyclables, BNAC
+  - slug: stationnement_velo_velo
+    label: Stationnement vélo
+    description: arceaux, consignes, stationnement sécurisé en gare, base nationale du stationnement cyclable, BNSC
+  - slug: itineraires_cyclables
+    label: Itinéraires cyclables
+    description: véloroutes, voies vertes, EuroVelo, itinéraires de cyclotourisme, VTT, géostandard véloroutes
+  - slug: velos_libre_service
+    label: Vélos en libre-service
+    description: VLS, vélopartage, stations de vélos en libre-service, GBFS, disponibilité en temps réel
+  - slug: usage_velo
+    label: Usage du vélo
+    description: comptages vélo, compteurs, traces GPS, applications mobiles, enquêtes mobilité, part modale vélo
+  - slug: accidentologie_velo
+    label: Accidentologie vélo
+    description: accidents impliquant des cyclistes, sécurité routière vélo
+  - slug: cyclabilite
+    label: Cyclabilité
+    description: baromètre des villes cyclables, indicateurs de cyclabilité, taux de cyclabilité de la voirie
+  - slug: parc_velos
+    label: Parc de vélos
+    description: parc de vélos, vol de vélo, marquage bicycode, filière du vélo, vente de vélos
+  - slug: cyclologistique
+    label: Cyclologistique
+    description: livraison à vélo, vélo cargo, logistique du dernier kilomètre à vélo
+- slug: pieton_accessibilite_pmr
+  label: Piéton et accessibilité PMR
+  description: piéton, marche à pied, accessibilité, PMR, personnes à mobilité réduite, handicap, cheminement piéton
+  subcategories:
+  - slug: accessibilite_voirie
+    label: Accessibilité de la voirie
+    description: cheminements piétons accessibles, trottoirs abaissés, obstacles, registre d'accessibilité de la voirie
+  - slug: accessibilite_transports
+    label: Accessibilité des transports publics
+    description: arrêts accessibles PMR, véhicules accessibles, schéma directeur d'accessibilité
+  - slug: accessibilite_equipements
+    label: Accessibilité des équipements publics
+    description: établissements recevant du public accessibles, ERP, acceslibre
+  - slug: usage_marche
+    label: Usage de la marche
+    description: comptages piétons, flux piétons, enquêtes modes actifs, part modale de la marche, EDP (engins de déplacement personnel)
+  - slug: accidentologie_pieton
+    label: Accidentologie piétons
+    description: accidents impliquant des piétons, sécurité routière piétonne
+- slug: mobilite_partagee
+  label: Mobilité partagée
+  description: mobilité partagée, covoiturage, autopartage, trottinette, free-floating, micromobilité, engins de déplacement personnel en libre-service
+  subcategories:
+  - slug: covoiturage
+    label: Covoiturage
+    description: trajets de covoiturage, plateformes de covoiturage, nombre d'utilisateurs, taux d'occupation, observatoire du covoiturage
+  - slug: aires_covoiturage
+    label: Aires de covoiturage
+    description: localisation, capacité et équipements des aires de covoiturage, base nationale des lieux de covoiturage
+  - slug: autopartage
+    label: Autopartage
+    description: autopartage, stations et véhicules en autopartage, boucle ou trace directe, opérateurs d'autopartage
+  - slug: engins_libre_service
+    label: Trottinettes et engins partagés
+    description: trottinettes en libre-service, free-floating, scooters partagés, GBFS, micromobilité
+  - slug: maas
+    label: MaaS (Mobility as a Service)
+    description: MaaS, agrégateurs de mobilité, calculateurs d'itinéraires multimodaux, information multimodale
+  - slug: tarification_mobilite_partagee
+    label: Tarification et modèles économiques
+    description: tarifs des services de mobilité partagée, coûts d'utilisation, abonnements
+- slug: fret_logistique
+  label: Fret et logistique
+  description: fret, logistique, marchandises, transport de marchandises, logistique urbaine, livraison
+  subcategories:
+  - slug: aires_livraison
+    label: Aires de livraison
+    description: aires de livraison, arrêtés de circulation relatifs aux aires de livraison, schéma aire de livraison, curb management
+  - slug: arretes_circulation_marchandises
+    label: Arrêtés de circulation liés aux marchandises
+    description: arrêtés permanents de transport de marchandises en ville, réglementation du transport de marchandises
+  - slug: transport_marchandises
+    label: Transport de marchandises
+    description: flux de marchandises, volumes transportés, transport routier de marchandises, poids lourds, comptages PL
+  - slug: logistique_urbaine
+    label: Logistique urbaine
+    description: entrepôts, espaces logistiques urbains, dernier kilomètre, hôtels logistiques
+  - slug: fret_ferroviaire_fluvial_maritime
+    label: Fret ferroviaire, fluvial et maritime
+    description: fret ferroviaire, transport fluvial de marchandises, transport maritime de marchandises, ports
+- slug: trafic_routier
+  label: Trafic routier
+  description: trafic routier, comptage routier, TMJA, TMJO, mesures de trafic, débits, circulation
+  subcategories:
+  - slug: trafic_temps_reel
+    label: Trafic en temps réel
+    description: débit, vitesse, taux d'occupation des routes, événements et incidents, DATEX II
+  - slug: comptage_routier
+    label: Comptages routiers
+    description: comptages permanents, temporaires, ponctuels, stations de mesure, capteurs de trafic
+  - slug: floating_car_data
+    label: Floating Car Data
+    description: FCD, XFCD, temps de parcours, vitesse en temps différé, estimation origine-destination
+  - slug: comptages_pl
+    label: Comptages poids lourds
+    description: classification par nombre d'essieux, pesage, comptage des poids lourds
+  - slug: enquetes_od_routieres
+    label: Enquêtes origine-destination routières
+    description: enquêtes OD routières, enquêtes de circulation, matrices de déplacement
+  - slug: capteurs_trafic
+    label: Capteurs de trafic
+    description: position des capteurs, stations de mesure, Siredo

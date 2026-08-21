@@ -1,0 +1,20 @@
+- slug: trafic_routier
+  label: Trafic routier
+  description: "trafic routier, comptage routier, TMJA, TMJO, mesures de trafic, débits"
+  subcategories:
+    - slug: comptage_routier
+      label: Comptages routier
+      description: "trafics, trafics routiers, moyennes journalières, TMJO, TMJA, débits, comptages"
+    - slug: capteurs_trafic
+      label: Capteurs de trafic
+      description: "capteurs, position des capteurs, stations de mesure, Siredo"
+- slug: stationnement
+  label: Trafic routier
+  description: "trafic routier, comptage routier, TMJA, TMJO, mesures de trafic, débits"
+  subcategories:
+    - slug: stationnement_parc
+      label: Lieux de stationnement
+      description: "lieux de stationnement, parking en ouvrage, parc de stationnement, débits, comptages"
+    - slug: stationnement_voirie
+      label: Stationnement en voirie
+      description: "places de stationnement, stationnement en voirie, linéaire de stationnement, places PMR"
