@@ -1,0 +1,42 @@
+import os
+import s3fs
+# env sspcloud onyxia
+os.environ["AWS_ACCESS_KEY_ID"] = '285WY764HGF84PM0ROJD'
+os.environ["AWS_SECRET_ACCESS_KEY"] = '1tM7Vc6u++N+bXgZWWQ82bX8CMIxvflG3SEWVxcf'
+os.environ["AWS_SESSION_TOKEN"] = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiIyODVXWTc2NEhHRjg0UE0wUk9KRCIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sImF1ZCI6WyJtaW5pby1kYXRhbm9kZSIsIm9ueXhpYSIsImFjY291bnQiXSwiYXV0aF90aW1lIjoxNzI3NTkzMjEzLCJhenAiOiJvbnl4aWEiLCJlbWFpbCI6InBhdGdlbmRyZTk0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJleHAiOjE3MjgxOTgwMTgsImZhbWlseV9uYW1lIjoiR2VuZHJlIiwiZ2l2ZW5fbmFtZSI6IlBhdHJpY2siLCJncm91cHMiOlsiVVNFUl9PTllYSUEiXSwiaWF0IjoxNzI3NTkzMjE4LCJpc3MiOiJodHRwczovL2F1dGgubGFiLnNzcGNsb3VkLmZyL2F1dGgvcmVhbG1zL3NzcGNsb3VkIiwianRpIjoiZWI4NzJiMTctMjUzMi00YjBkLWE3ZGUtZjRiMGE3NzUzNjViIiwibmFtZSI6IlBhdHJpY2sgR2VuZHJlIiwicG9saWN5Ijoic3Rzb25seSIsInByZWZlcnJlZF91c2VybmFtZSI6InBnZW5kcmUiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc3NwY2xvdWQiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlIjoicm9sZTEiLCJyb2xlLXRlc3QiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc3NwY2xvdWQiXSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBncm91cHMgZW1haWwiLCJzaWQiOiI3NDA4ZDg3MS00OTlhLTQ1ZDItODI2ZS1mZTFkODg2YTI5MmIiLCJzdWIiOiJmMjY4NThlOS05MTM5LTRiMDYtYThiNy04Njc5YmRiOWQwMzciLCJ0eXAiOiJCZWFyZXIifQ.HBTh9fo6LbBweZTHrpQ0ERpbueyQPd4OVwl0nk82bH7n1pGR2bR6I9OqbvPkM0WLEYCG8SL1hqh_rmFZGM1CzQ'
+os.environ["AWS_DEFAULT_REGION"] = 'us-east-1'
+# env nubonyxia
+os.environ["AWS_ACCESS_KEY_ID"] = 'M4TG8L6FEEMD0H3UC6VV'
+os.environ["AWS_SECRET_ACCESS_KEY"] = 'Py17BjuzgegTlSW9wniVBiTQzY1cXWXSA8bgMJOH'
+os.environ["AWS_SESSION_TOKEN"] = 'eyJhbGciOiJIUzUxMiIsInR5cCI...KGtrfq96TUkVIRPIi_4A'
+os.environ["AWS_DEFAULT_REGION"] = 'us-east-1'
+fs = s3fs.S3FileSystem(
+    client_kwargs={'endpoint_url': 'https://'+'minio.lab.sspcloud.fr'},
+    key = os.environ["AWS_ACCESS_KEY_ID"], 
+    secret = os.environ["AWS_SECRET_ACCESS_KEY"], 
+    token = os.environ["AWS_SESSION_TOKEN"])
+key = 's3/pgendre/test.csv'
+bucket = 'pgendre'
+import pandas as pd
+FILE_PATH_S3="pgendre/test.csv"
+!!! nubonyxia plante sur le fs.open
+!!!ProxyConnectionError: Failed to connect to proxy URL: "http://172.16.0.53:3128"
+with fs.open(FILE_PATH_S3, mode="rb") as file_in:
+    df_bpe = pd.read_csv(file_in, sep=",")
+
+
+import duckdb
+con = duckdb.connect(database=":memory:", read_only=False)
+con.execute("INSTALL 'httpfs';")
+!!! extension httpfs pas dispo sur nubonyxia?
+!!!----> 2 con.execute("INSTALL 'httpfs';")
+!!!
+!!!IOException: IO Error: Failed to download extension "httpfs" at URL "http://extensions.duckdb.org/v0.7.1/linux_amd64/httpfs.duckdb_extension.gz"
+!!!Extension "httpfs" is an existing extension.
+
+commande="CREATE SECRET secret (TYPE S3,ENDPOINT 'minio.lab.sspcloud.fr', KEY_ID '"+os.environ['AWS_ACCESS_KEY_ID']+"',SECRET '"+os.environ['AWS_SECRET_ACCESS_KEY']+"',SESSION_TOKEN '"+os.environ['AWS_SESSION_TOKEN']+"', REGION 'us-east-1');"
+con.execute(commande)
+
+duckdb.read_csv("s3://pgendre/test.csv")
+# affiche la table CSV
+duckdb.sql("CREATE TABLE test AS SELECT * FROM 's3://pgendre/test.csv';")
