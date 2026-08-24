@@ -1,13 +1,15 @@
 # catalogage des données de mobilité de data gouv
 
-ces notebooks implémentent des étapes de recherche de jeux de données open data.
+Ce repo contient une documentation et des codes (notebooks, prompts) en vue de faire l'inventaire des données open data du domaine Mobilité/Transport. Ce projet s'inscrit dans le cadre du projet du projet MobSciDat Factory (contrat n°ANR-23-PEMO-0004). Ce travail bénéficie d'une aide de l'Etat gérée par l'Agence Nationale de la Recherche attribuée au project Mob Sci-Dat Factory au titre de France 2030 portant la référence ANR-23-PEMO-0004.
 
-l'objectif final est de pouvoir créer un portail des données de mobilité, complémentaire de transport data gouv, et de logistique data gouv, sur le périmètre des données pour l'analyse des mobilités.
+L'objectif final est de pouvoir créer un portail des données de mobilité, complémentaire de transport data gouv, et de logistique data gouv, sur le périmètre des données pour l'analyse des mobilités.
 
-l'objectif technique à court terme est de pouvoir classer les données de data.gouv en collections de données par thème métier 
+L'objectif technique à court terme est de pouvoir classer les données de data.gouv en collections de données par thème métier 
 (stationnement, voirie, transport public, trafic routier, logistique et fret, vélo, marche, accessibilité, mobilité partagée...) et par sous-thème dans chaque métier.
 
-l'approche est de mettre en place un pipeline de traitement avec les étapes suivantes:
+Le catalogue de data.gouv.fr contient environ 75k datasets
+
+L'approche est de mettre en place un pipeline de traitement avec les étapes suivantes:
 0) sélection des jeux de données du domaine mobilité/transport
 pour chaque thème
 1) sélection des jeux de données pertinents pour le thème
@@ -16,7 +18,6 @@ pour chaque thème
 4) publication des collections de données par thème (dans un tableau Grist et/ou en tant que collection dans ecologie.data.gouv)
 5) envoi de messages aux producteurs de données (retour sur la qualité des méta-données)
 
-le catalogue de data.gouv.fr contient environ 75k datasets
 
 #### inspiration de flowdatagouv
 https://github.com/FLI-GCT/FlowDataGouv est un démonstrateur développé en mars 2026 par Guillaume Clément à l'occasion de la publication du serveur MCP de data.gouv.fr
